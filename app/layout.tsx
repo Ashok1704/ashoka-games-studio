@@ -10,7 +10,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ashokagames.netlify.app"),
+  metadataBase: new URL("https://ashoka-games-studio.vercel.app"),
   title: {
     default: "Ashoka Games | HTML5 & Mobile Game Studio",
     template: "%s | Ashoka Games",
@@ -30,9 +30,12 @@ export const metadata: Metadata = {
     title: "Ashoka Games",
     description:
       "We build addictive HTML5 & mobile games for clients and players worldwide.",
-    url: "https://ashokagames.netlify.app",
+    url: "https://ashoka-games-studio.vercel.app",
     siteName: "Ashoka Games",
     type: "website",
+  },
+  verification: {
+    google: "n4FvtLUVkQ69pP1wXCBx-LAue_3mmbKvFN_PUSc9TaU", 
   },
 };
 
