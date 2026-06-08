@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #070912;
+  --foreground: #e8ecff;
+  --muted: #99a0bf;
+  --card-bg: rgba(23, 28, 47, 0.55);
+  --border: rgba(130, 153, 255, 0.28);
+  --glow: #6f7cff;
+  --glow-2: #8f4bff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
+  background:
+    radial-gradient(circle at 15% 15%, rgba(111, 124, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 85% 20%, rgba(143, 75, 255, 0.16), transparent 28%),
+    linear-gradient(180deg, #070912 0%, #090d18 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #58608d #0a1022;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(15px);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.02) inset,
+    0 20px 45px rgba(5, 7, 14, 0.5);
+}
+
+.neon-ring {
+  box-shadow:
+    0 0 0 1px rgba(143, 75, 255, 0.34),
+    0 0 24px rgba(111, 124, 255, 0.24);
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
